@@ -16,11 +16,14 @@ const BoxContainer = styled.div<{ backgroundColor?: string }>`
   height: 141px;
   background: ${({ backgroundColor }) => backgroundColor};
   margin-right: 28px;
+  :last-child {
+    margin-right: 0px;
+  }
 `;
 
 const RowImage = styled.div`
   display: flex;
-  width: 100%;
+  width: 229px;
   justify-content: center;
   align-items: center;
 `;
@@ -29,7 +32,7 @@ const Image = styled.img<{ imageWidth?: string }>`
   width: ${({ imageWidth }) => imageWidth};
 `;
 
-const BoxImage: React.FC<ParcelsImportant> = ({
+const DestacadasImg: React.FC<ParcelsImportant> = ({
   imgUrl,
   handleClick,
   backgroundColor,
@@ -44,4 +47,4 @@ const BoxImage: React.FC<ParcelsImportant> = ({
   );
 };
 
-export default BoxImage;
+export default DestacadasImg;

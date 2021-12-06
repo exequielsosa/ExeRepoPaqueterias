@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 
 export interface TitleProps {
   children: React.ReactNode;
-  justifyContent?: string;
   fontColor?: string;
   marginTop?: string;
   marginRight?: string;
@@ -12,7 +11,6 @@ export interface TitleProps {
 }
 
 const Layout = styled.div<{
-  justifyContent?: string;
   fontColor?: string;
   marginTop?: string;
   marginRight?: string;
@@ -20,7 +18,7 @@ const Layout = styled.div<{
   marginBottom?: string;
 }>`
   display: flex;
-  justify-content: ${({ justifyContent }) => justifyContent};
+  justify-content: center;
   color: ${({ fontColor }) => fontColor};
   font-family: Inter, sans-serif;
   font-weight: 700;
@@ -33,11 +31,11 @@ const Layout = styled.div<{
   @media (min-width: 600px) {
     font-size: 36px;
     line-height: 44px;
+    justify-content: left;
   }
 `;
 
 const Titles: React.FC<TitleProps> = ({
-  justifyContent = "center",
   fontColor = "#233362",
   marginTop,
   marginRight,
@@ -47,7 +45,6 @@ const Titles: React.FC<TitleProps> = ({
 }) => {
   return (
     <Layout
-      justifyContent={justifyContent}
       fontColor={fontColor}
       marginTop={marginTop}
       marginRight={marginRight}

@@ -1,14 +1,18 @@
 import "./styles.css";
-import BoxImage from "./BoxImage";
+import BoxImage from "./ImgImportant";
 import { mockParcels } from "./services/mocklist";
 import Container from "./CardContainer";
 import SearchBox from "./SearchBox";
 import GeneralLayout from "./GeneralLayout";
+import Destacadas from "./Destacadas";
 
 export default function App() {
   return (
     <div className="App">
       <GeneralLayout>
+        <br></br>
+        <br></br>
+        <Destacadas handleClick={() => "https://www.google.com"} />
         <SearchBox
           title="Paqueterías en México"
           placeholderMobile="Buscar..."
