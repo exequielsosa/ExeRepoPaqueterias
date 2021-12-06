@@ -15,10 +15,11 @@ const Container = styled.div`
 `;
 
 const Layout = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1036px;
-  align-items: center;
+  width: 100%;
+  @media (min-width: 600px) {
+    max-width: 1036px;
+    align-items: center;
+  }
 `;
 
 const GeneralLayout: React.FC<GeneralLayoutProps> = ({ children }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "@emotion/styled/macro";
 import DestacadasImg from "../DestacadasImg";
 import Titles from "../Titles";
 
@@ -15,8 +15,10 @@ const ContainerDesk = styled.div`
   height: 303px;
   align-content: space;
   justify-content: center;
+  margin-bottom: 31px;
   @media (min-width: 600px) {
     height: 409px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -28,6 +30,24 @@ const ContainerImg = styled.div`
   justify-content: space-between;
   overflow-x: auto;
   white-space: nowrap;
+  padding-bottom: 8px;
+  ::-webkit-scrollbar {
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e5e5e5;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    box-shadow: rgba(0, 0, 0, 0.5);
+  }
+  ::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #f4f4ff;
+  }
 `;
 
 const Destacadas: React.FC<ParcelsDestaca> = ({ handleClick }) => {
