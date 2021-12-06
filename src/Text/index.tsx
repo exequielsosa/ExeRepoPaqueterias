@@ -23,16 +23,16 @@ const Layout = styled.div<{
   justify-content: ${({ justifyContent }) => justifyContent};
   color: ${({ fontColor }) => fontColor};
   font-family: Inter, sans-serif;
-  font-size: 19px;
-  line-height: 23px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
   margin-left: ${({ marginLeft }) => marginLeft};
   margin-right: ${({ marginRight }) => marginRight};
   margin-top: ${({ marginTop }) => marginTop};
   margin-bottom: ${({ marginBottom }) => marginBottom};
   @media (min-width: 600px) {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: 19px;
+    line-height: 23px;
   }
 `;
 
