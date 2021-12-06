@@ -44,8 +44,8 @@ const Destacadas: React.FC<ParcelsDestaca> = ({ handleClick }) => {
           backgroundColor="#022A52"
         />
         <DestacadasImg
-          imgUrl="estafeta.png"
-          imageWidth="170px"
+          imgUrl="esta.svg"
+          imageWidth="120px"
           handleClick={handleClick}
           backgroundColor="#CF2028"
         />
