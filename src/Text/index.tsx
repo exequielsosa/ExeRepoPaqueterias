@@ -29,6 +29,11 @@ const Layout = styled.div<{
   margin-right: ${({ marginRight }) => marginRight};
   margin-top: ${({ marginTop }) => marginTop};
   margin-bottom: ${({ marginBottom }) => marginBottom};
+  @media (min-width: 600px) {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+  }
 `;
 
 const Text: React.FC<TextProps> = ({

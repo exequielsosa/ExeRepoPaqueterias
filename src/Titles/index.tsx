@@ -8,6 +8,8 @@ export interface TitleProps {
   marginRight?: string;
   marginLeft?: string;
   marginBottom?: string;
+  justifyContentMobile?: string;
+  justifyContentDesktop?: string;
 }
 
 const Layout = styled.div<{
@@ -16,9 +18,11 @@ const Layout = styled.div<{
   marginRight?: string;
   marginLeft?: string;
   marginBottom?: string;
+  justifyContentMobile?: string;
+  justifyContentDesktop?: string;
 }>`
   display: flex;
-  justify-content: center;
+  justify-content: ${({ justifyContentMobile }) => justifyContentMobile};
   color: ${({ fontColor }) => fontColor};
   font-family: Inter, sans-serif;
   font-weight: 700;
@@ -31,7 +35,7 @@ const Layout = styled.div<{
   @media (min-width: 600px) {
     font-size: 36px;
     line-height: 44px;
-    justify-content: left;
+    justify-content: ${({ justifyContentDesktop }) => justifyContentDesktop};
   }
 `;
 
@@ -41,6 +45,8 @@ const Titles: React.FC<TitleProps> = ({
   marginRight,
   marginLeft,
   marginBottom,
+  justifyContentDesktop = "left",
+  justifyContentMobile = "center",
   children
 }) => {
   return (
@@ -50,6 +56,8 @@ const Titles: React.FC<TitleProps> = ({
       marginRight={marginRight}
       marginLeft={marginLeft}
       marginBottom={marginBottom}
+      justifyContentDesktop={justifyContentDesktop}
+      justifyContentMobile={justifyContentMobile}
     >
       {children}
     </Layout>

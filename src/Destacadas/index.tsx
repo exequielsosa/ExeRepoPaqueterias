@@ -13,7 +13,6 @@ const ContainerDesk = styled.div`
   flex-direction: column;
   background: #f4f4ff;
   height: 303px;
-  align-content: space;
   justify-content: center;
   margin-bottom: 31px;
   @media (min-width: 600px) {
