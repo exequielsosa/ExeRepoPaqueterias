@@ -15,7 +15,7 @@ export default function App() {
         <SendContainer handleClick={() => "https://www.google.com"} />
         <Destacadas handleClick={() => "https://www.google.com"} />
         <SearchBox
-          title="Paqueterías en México"
+          title="Paqueterías en Test  "
           placeholderMobile="Buscar..."
           text="Disfruta de una amplia variedad de opciones para realizar todos tus envíos desde México con las mejores paqueterías a nivel nacional y los precios más competitivos del mercado."
         />
