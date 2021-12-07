@@ -16,6 +16,10 @@ export interface BoxProps {
   paddingLeftDesktop?: string;
   paddingRightDesktop?: string;
   paddingBottomDesktop?: string;
+  paddingTopMobile?: string;
+  paddingLeftMobile?: string;
+  paddingRightMobile?: string;
+  paddingBottomMobile?: string;
 }
 
 const Layout = styled.div<{
@@ -32,6 +36,10 @@ const Layout = styled.div<{
   paddingLeftDesktop?: string;
   paddingRightDesktop?: string;
   paddingBottomDesktop?: string;
+  paddingTopMobile?: string;
+  paddingLeftMobile?: string;
+  paddingRightMobile?: string;
+  paddingBottomMobile?: string;
 }>`
   display: flex;
   flex-direction: ${({ flexDirection }) => flexDirection};
@@ -43,6 +51,10 @@ const Layout = styled.div<{
   align-items: ${({ alignItems }) => alignItems};
   align-content: ${({ alignContent }) => alignContent};
   width: ${({ width }) => width};
+  padding-top: ${({ paddingTopMobile }) => paddingTopMobile};
+  padding-left: ${({ paddingLeftMobile }) => paddingLeftMobile};
+  padding-right: ${({ paddingRightMobile }) => paddingRightMobile};
+  padding-bottom: ${({ paddingBottomMobile }) => paddingBottomMobile};
   @media (min-width: 600px) {
     padding-top: ${({ paddingTop }) => paddingTop};
     padding-left: ${({ paddingLeft }) => paddingLeft};
@@ -71,6 +83,10 @@ const BoxWhite: React.FC<BoxProps> = ({
   paddingLeftDesktop = "40px",
   paddingRightDesktop = "40px",
   paddingBottomDesktop = "48px",
+  paddingTopMobile = "33px",
+  paddingLeftMobile = "13px",
+  paddingRightMobile = "13px",
+  paddingBottomMobile = "33px",
   children
 }) => {
   return (
@@ -88,6 +104,10 @@ const BoxWhite: React.FC<BoxProps> = ({
       paddingLeftDesktop={paddingLeftDesktop}
       paddingRightDesktop={paddingRightDesktop}
       paddingBottomDesktop={paddingBottomDesktop}
+      paddingTopMobile={paddingTopMobile}
+      paddingLeftMobile={paddingLeftMobile}
+      paddingRightMobile={paddingRightMobile}
+      paddingBottomMobile={paddingBottomMobile}
     >
       {children}
     </Layout>

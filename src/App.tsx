@@ -1,12 +1,12 @@
 import "./styles.css";
 import BoxImage from "./ImgImportant";
 import { mockParcels } from "./services/mocklist";
-import Container from "./CardContainer";
 import SearchBox from "./SearchBox";
 import GeneralLayout from "./GeneralLayout";
 import Destacadas from "./Destacadas";
 import SendContainer from "./SendContainer";
 import { Row, Table, ContainerCard, ContainerCards } from "./ContainerCards";
+import Disclaimer from "./Disclaimer";
 
 export default function App() {
   return (
@@ -35,7 +35,7 @@ export default function App() {
             </Table>
           </ContainerCard>
         </ContainerCards>
-
+        <Disclaimer />
         <br></br>
       </GeneralLayout>
     </div>
