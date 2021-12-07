@@ -37,4 +37,5 @@ export const ContainerCard = styled.div`
 export const ContainerCards = styled.div`
   justify-content: center;
   display: flex;
+  margin-bottom: 70px;
 `;
