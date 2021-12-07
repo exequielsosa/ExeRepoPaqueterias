@@ -1,6 +1,11 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  margin-left: 4px;
-  margin-right: 4px;
+  padding: 8px;
+  background: #e5e5e5;
+}
+@media (min-width: 600px) {
+  .App {
+    padding: 24px;
+  }
 }

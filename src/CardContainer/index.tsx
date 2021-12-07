@@ -8,6 +8,12 @@ const Layout = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  max-width: 1036px;
+`;
+const Content = styled.div`
+  width: 100%;
+  justify-content: center;
+  display: flex;
 `;
 
 const GridElement = styled.div`
@@ -27,9 +33,11 @@ const GridElement = styled.div`
 
 const Container: React.FC<GridCards> = ({ children }) => {
   return (
-    <Layout>
-      <GridElement>{children}</GridElement>
-    </Layout>
+    <Content>
+      <Layout>
+        <GridElement>{children}</GridElement>
+      </Layout>
+    </Content>
   );
 };
 

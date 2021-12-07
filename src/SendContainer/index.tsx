@@ -16,10 +16,17 @@ const Container = styled.div`
   padding-top: 63px;
   padding-bottom: 21px;
   background: #fafaff;
+  max-width: 1036px;
   @media (min-width: 600px) {
     padding-top: 114px;
     padding-bottom: 89px;
   }
+`;
+
+const Layout = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
 `;
 
 const DivTitle = styled.div`
@@ -43,22 +50,24 @@ const DivButton = styled.div`
 
 const SendContainer: React.FC<SendContainerProps> = ({ handleClick }) => {
   return (
-    <Container>
-      <DivTitle>
-        <Titles justifyContentDesktop="center">
-          Envía al mejor precio de todo México
-        </Titles>
-      </DivTitle>
-      <DivText>
-        <Text>
-          Despreocúpate de tu logística de envíos y conoce las mejores opciones
-          para realizar tus envíos nacionales e internacionales{" "}
-        </Text>
-      </DivText>
-      <DivButton>
-        <Button handleClick={handleClick}>Comenzar a enviar</Button>
-      </DivButton>
-    </Container>
+    <Layout>
+      <Container>
+        <DivTitle>
+          <Titles justifyContentDesktop="center">
+            Envía al mejor precio de todo México
+          </Titles>
+        </DivTitle>
+        <DivText>
+          <Text>
+            Despreocúpate de tu logística de envíos y conoce las mejores
+            opciones para realizar tus envíos nacionales e internacionales{" "}
+          </Text>
+        </DivText>
+        <DivButton>
+          <Button handleClick={handleClick}>Comenzar a enviar</Button>
+        </DivButton>
+      </Container>
+    </Layout>
   );
 };
 

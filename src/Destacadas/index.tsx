@@ -15,10 +15,18 @@ const ContainerDesk = styled.div`
   height: 303px;
   justify-content: center;
   margin-bottom: 31px;
+  max-width: 1036px;
   @media (min-width: 600px) {
     height: 409px;
     margin-bottom: 0px;
   }
+`;
+
+const Layout = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: #f4f4ff;
 `;
 
 const ContainerImg = styled.div`
@@ -51,25 +59,27 @@ const ContainerImg = styled.div`
 
 const Destacadas: React.FC<ParcelsDestaca> = ({ handleClick }) => {
   return (
-    <ContainerDesk>
-      <Titles>Paqueterías destacadas</Titles>
-      <ContainerImg>
-        <DestacadasImg imgUrl="dhl.svg" handleClick={handleClick} />
-        <DestacadasImg imgUrl="fedex.svg" handleClick={handleClick} />
-        <DestacadasImg
-          imgUrl="paqueteexpress.svg"
-          imageWidth="210px"
-          handleClick={handleClick}
-          backgroundColor="#022A52"
-        />
-        <DestacadasImg
-          imgUrl="esta.svg"
-          imageWidth="120px"
-          handleClick={handleClick}
-          backgroundColor="#CF2028"
-        />
-      </ContainerImg>
-    </ContainerDesk>
+    <Layout>
+      <ContainerDesk>
+        <Titles>Paqueterías destacadas</Titles>
+        <ContainerImg>
+          <DestacadasImg imgUrl="dhl.svg" handleClick={handleClick} />
+          <DestacadasImg imgUrl="fedex.svg" handleClick={handleClick} />
+          <DestacadasImg
+            imgUrl="paqueteexpress.svg"
+            imageWidth="210px"
+            handleClick={handleClick}
+            backgroundColor="#022A52"
+          />
+          <DestacadasImg
+            imgUrl="esta.svg"
+            imageWidth="120px"
+            handleClick={handleClick}
+            backgroundColor="#CF2028"
+          />
+        </ContainerImg>
+      </ContainerDesk>
+    </Layout>
   );
 };
 

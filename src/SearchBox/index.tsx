@@ -15,7 +15,7 @@ export interface SearchBoxProps {
 const LayoutMobile = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   width: 100%;
   @media (min-width: 600px) {
     display: none;
@@ -29,10 +29,17 @@ const LayoutInputSearch = styled.div`
 
 const LayoutDesktop = styled.div`
   display: none;
+  max-width: 1036px;
   @media (min-width: 600px) {
     display: flex;
     margin-bottom: 40px;
   }
+`;
+
+const Layout = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
 `;
 
 const SearchBox: React.FC<SearchBoxProps> = ({
@@ -49,13 +56,15 @@ const SearchBox: React.FC<SearchBoxProps> = ({
           <InputSearch placeHolder={placeholderMobile} />
         </LayoutInputSearch>
       </LayoutMobile>
-      <LayoutDesktop>
-        <BoxWhite>
-          <Titles marginBottom="16px">{title}</Titles>
-          <Text marginBottom="24px">{text}</Text>
-          <InputSearch placeHolder={placeholderDesktop} />
-        </BoxWhite>
-      </LayoutDesktop>
+      <Layout>
+        <LayoutDesktop>
+          <BoxWhite>
+            <Titles marginBottom="16px">{title}</Titles>
+            <Text marginBottom="24px">{text}</Text>
+            <InputSearch placeHolder={placeholderDesktop} />
+          </BoxWhite>
+        </LayoutDesktop>
+      </Layout>
     </>
   );
 };
