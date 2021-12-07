@@ -18,7 +18,7 @@ const BoxContainer = styled.div`
   margin-bottom: 18px;
   box-shadow: 0px 3px 14px 2px rgba(152, 167, 204, 0.12);
   @media (min-width: 600px) {
-    max-width: 324px;
+    width: 100%;
   }
 `;
 

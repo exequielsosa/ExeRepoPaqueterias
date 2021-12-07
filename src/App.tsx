@@ -5,8 +5,8 @@ import Container from "./CardContainer";
 import SearchBox from "./SearchBox";
 import GeneralLayout from "./GeneralLayout";
 import Destacadas from "./Destacadas";
-// import SendContainer from "./";
 import SendContainer from "./SendContainer";
+import { Row, Table, ContainerCard } from "./ContainerCards";
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
           placeholderMobile="Buscar..."
           text="Disfruta de una amplia variedad de opciones para realizar todos tus envíos desde México con las mejores paqueterías a nivel nacional y los precios más competitivos del mercado."
         />
-        <Container>
+        {/* <Container>
           {mockParcels.map((el) => (
             <BoxImage
               imgUrl={el.url}
@@ -28,7 +28,22 @@ export default function App() {
               handleClick={() => el.link}
             />
           ))}
-        </Container>
+        </Container> */}
+        <ContainerCard>
+          <Table>
+            {mockParcels.map((el) => (
+              <Row>
+                <BoxImage
+                  imgUrl={el.url}
+                  title={el.title}
+                  description={el.list}
+                  handleClick={() => el.link}
+                />
+              </Row>
+            ))}
+          </Table>
+        </ContainerCard>
+
         <br></br>
       </GeneralLayout>
     </div>
