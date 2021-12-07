@@ -36,7 +36,6 @@ const RowImage = styled.div`
 
 const RowTitle = styled.div`
   display: flex;
-  width: 100%;
   justify-content: left;
   font-family: Inter, sans-serif;
   font-weight: 700;
