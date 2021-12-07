@@ -17,8 +17,8 @@ const BoxContainer = styled.div`
   background-color: #fff;
   margin-bottom: 18px;
   box-shadow: 0px 3px 14px 2px rgba(152, 167, 204, 0.12);
-  @media (min-width: 600px) {
-    width: 100%;
+  @media (min-width: 900px) {
+    max-width: 326px;
   }
 `;
 

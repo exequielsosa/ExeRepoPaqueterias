@@ -33,6 +33,7 @@ const LayoutDesktop = styled.div`
   @media (min-width: 600px) {
     display: flex;
     margin-bottom: 40px;
+    margin-top: 30px;
   }
 `;
 
@@ -58,7 +59,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({
       </LayoutMobile>
       <Layout>
         <LayoutDesktop>
-          <BoxWhite>
+          <BoxWhite width="100%">
             <Titles marginBottom="16px">{title}</Titles>
             <Text marginBottom="24px">{text}</Text>
             <InputSearch placeHolder={placeholderDesktop} />
